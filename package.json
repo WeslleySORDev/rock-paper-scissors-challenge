@@ -4,12 +4,22 @@
   "description": "![Design preview for the Rock, Paper, Scissors coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vite": "^6.2.2"
+    "vite": "^6.2.2",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "@vitejs/plugin-react": "^4.3.4"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
