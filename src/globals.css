@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --font-barlow-semi-condensed: "Barlow Semi Condensed", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply h-screen w-full bg-linear-to-b from-[hsl(214,_47%,_23%)] to-[hsl(237,_49%,_15%)] font-barlow-semi-condensed;
+  }
+}
