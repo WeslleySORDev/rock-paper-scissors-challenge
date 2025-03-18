@@ -1,6 +1,10 @@
-import { ChooseButton } from "./components/choose-button";
+import { LizardButton } from "./components/Home/lizard-button";
+import { PaperButton } from "./components/Home/paper-button";
+import { RockButton } from "./components/Home/rock-button";
+import { ScissorsButton } from "./components/Home/scissors-button";
+import { SpockButton } from "./components/Home/spock-button";
 
-const POSSIBLE_CHOOSES = [
+const CHOOSE_INFO = [
   {
     name: "scissors",
     image_path: "/assets/images/icon-scissors.svg",
@@ -34,6 +38,14 @@ const POSSIBLE_CHOOSES = [
   },
 ];
 
+const CHOOSE_COMPONENTS = [
+  <ScissorsButton />,
+  <SpockButton />,
+  <PaperButton />,
+  <LizardButton />,
+  <RockButton />,
+];
+
 export default function App() {
   return (
     <div className="flex flex-col h-screen pt-8 pb-14 px-8">
@@ -57,14 +69,8 @@ export default function App() {
             src="/assets/images/bg-pentagon.svg"
             alt=""
           />
-          {POSSIBLE_CHOOSES.map((choose, index) => {
-            return (
-              <ChooseButton
-                image_path={choose.image_path}
-                name={choose.name}
-                position_on_pentagon={index as 0 | 1 | 2 | 3 | 4}
-              />
-            );
+          {CHOOSE_INFO.map((choose, index) => {
+            return CHOOSE_COMPONENTS[index];
           })}
         </div>
       </main>
