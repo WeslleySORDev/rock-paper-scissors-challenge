@@ -7,32 +7,27 @@ import { SpockButton } from "./components/Home/spock-button";
 const CHOOSE_INFO = [
   {
     name: "scissors",
-    image_path: "/assets/images/icon-scissors.svg",
     wins: ["paper", "lizard"],
     loses: ["spock", "rock"],
   },
 
   {
     name: "spock",
-    image_path: "/assets/images/icon-spock.svg",
     wins: ["scissors", "rock"],
     loses: ["lizard", "paper"],
   },
   {
     name: "paper",
-    image_path: "/assets/images/icon-paper.svg",
     wins: ["rock", "spock"],
     loses: ["scissors", "lizard"],
   },
   {
     name: "lizard",
-    image_path: "/assets/images/icon-lizard.svg",
     wins: ["spock", "paper"],
     loses: ["scissors", "rock"],
   },
   {
     name: "rock",
-    image_path: "/assets/images/icon-rock.svg",
     wins: ["scissors", "lizard"],
     loses: ["spock", "paper"],
   },
@@ -69,7 +64,7 @@ export default function App() {
             src="/assets/images/bg-pentagon.svg"
             alt=""
           />
-          {CHOOSE_INFO.map((choose, index) => {
+          {CHOOSE_INFO.map((__, index) => {
             return CHOOSE_COMPONENTS[index];
           })}
         </div>
